@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>Bank Loan Application</title>
+  <div class="container">
+    <div style="text-align: center"><img src="bank.jpg" width="100" /></div>
+    <div class="text">
+        <h1 style="color:darkred"><em>YOUR BANK...!</em></h1>
+        </div>
+    </div>
+    <style>
+        .container{
+            border:5px solid red;
+            
+        }
+        .container {
+            display: grid;
+            align-items: center; 
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 5px;
+        }
+</style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("loan.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 5px;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
+    }
+
+    .error {
+      color: #ff0000;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      background-color: #4CAF50;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bank Loan Application</h1><br><hr>
+    <form onsubmit="return validateForm()">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+      <div id="nameError" class="error"></div>
+      <div class="form-group">
+        <label for="loan-option">Loan Option:</label><br>
+        <select id="loan-option" name="loan-option">
+          <option value="eyo">Enter Your Option</option>
+          <option value="personal">Personal Loan</option>
+          <option value="home">Home Loan</option>
+          <option value="car">Car Loan</option>
+          <option value="Educational">Educational Loan</option>
+        </select>
+      </div>
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" required>
+      <div id="emailError" class="error"></div>
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone" required>
+      <div id="phoneError" class="error"></div>
+      <label for="loanAmount">Loan Amount:</label>
+      <input type="number" id="loanAmount" name="loanAmount" required>
+      <label for="loanAmount">Annual Income:</label>
+      <input type="number" id="ai" name="Annualincome" required>
+
+      <label for="purpose">Purpose:</label>
+      <textarea id="purpose" name="purpose" rows="4" required></textarea>
+
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <div id="usernameError" class="error"></div>
+      <label for="option">Do you Already Have An Account In <em><b>Your Bank?!</b></em></label><br>
+      <input type="radio" name="yes" value="Yes">Yes
+      <input type="radio" name="yes" value="No">No
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var phone = document.getElementById("phone").value;
+      var username = document.getElementById("username").value;
+
+      var nameError = document.getElementById("nameError");
+      var emailError = document.getElementById("emailError");
+      var phoneError = document.getElementById("phoneError");
+      var usernameError = document.getElementById("usernameError");
+
+      nameError.textContent = "";
+      emailError.textContent = "";
+      phoneError.textContent = "";
+      usernameError.textContent = "";
+
+      var isValid = true;
+
+      // Validate name
+      if (name === "") {
+        nameError.textContent = "Please enter your name";
+        isValid = false;
+      }
+
+      // Validate email
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        emailError.textContent = "Please enter a valid email address";
+        isValid = false;
+      }
+
+      // Validate phone number
+      var phoneRegex = /^[0-9]{10}$/;
+      if (!phoneRegex.test(phone)) {
+        phoneError.textContent = "Please enter a valid 10-digit phone number";
+        isValid = false;
+      }
+
+      // Validate username
+      var usernameRegex = /^[a-zA-Z0-9_]{3,20}$/;
+      if (!usernameRegex.test(username)) {
+        usernameError.textContent = "Username must be 3-20 characters long and can only contain letters, numbers, and underscores";
+        isValid = false;
+      }
+
+      return isValid;
+    }
+  </script>
+</body>
+</html>
