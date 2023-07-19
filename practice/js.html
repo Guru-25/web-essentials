@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My JS page</title>
+</head>
+<body>
+
+    <h3>Learning JavaScript</h3>
+    
+    <script>    
+    function fact()
+    {
+        let n = document.getElementById('num').value;
+        let i, f = 1;
+        for (i = 1; i < parseInt(n) + 1; i++)
+            f = f * i;
+        return f;
+    }
+    function sum()
+    {
+        let n = document.getElementById('num').value;
+        let i, s = 0;
+        for (i = 0; i < parseInt(n); i++)
+            s = s + i;
+        return s;
+    }
+    function prime()
+    {
+        let n = parseInt(document.getElementById('num').value)
+        let flag = 0, i;
+        for (i = 2; i < n / 2; i++)
+        {
+            if (n % i == 0)
+            {
+                printf("%d is not a prime number", num);
+                flag = 1;
+                break;
+        }
+    }
+    if(flag == 0) {
+        printf("%d is a prime number", num);
+    }
+}
+    </script>
+
+    <label for="num">Enter a number: </label>
+    <input type="number" name="num" id="num">
+    <br><br>
+    1. <button onclick="document.getElementById('factorial').innerHTML = fact()">Factorial</button>
+    <br> <br>
+    2. <button onclick="document.getElementById('sum').innerHTML = sum()">Sum</button>
+    <br><br>
+    <hr>
+    The factorial of is:
+    <p id="factorial">🤔🤔</p>
+    The sum of is:
+    <p id="sum">🤔🤔</p>
+    
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Gururaja R">
+        <meta name="description" content="This is my first webpage">
+        <title> My first webpage </title>
+        <link rel="icon" href="image.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="main.css" type="text/css">
+    </head>
+
+    <body>
+        <header>
+            <!-- Comment hehe -->
+            <h1>Hello World!</h1>
+            <p>My first webpage.</p>
+        </header>
+        <hr>
+
+        <!-- basic -->
+        <main>
+        <article id="basic">
+        <h3>Text basic</h3>
+            <p>This is in paragraph
+                <br>used <abbr title="not bike break hehe">break</abbr> and abbrevation and tooltip here
+                <br><em>used emphasis here</em>
+                <br><strong>used strong here</strong>
+                <br>&nbsp; &nbsp; added space &nbsp; &nbsp; here
+                <br>&lt; &lt; &copy; Guru &gt; &gt;
+            </p>
+                <address>This is my address</address>
+
+        <!--list-->
+        <section>
+        <h3>learning list</h3>
+            <h4>unordered list</h4>
+            <ul>
+                <li>item 1</li>
+                <li>item 2</li>
+            </ul>
+            <h4>ordered list</h4>
+            <ol>
+                <li>item 1</li>
+                <li>item 2</li>
+            </ol>
+            <h4>descriptive list</h4>
+            <dl>
+                <dt>list 1</dt>
+                <dd>item 1</dd>
+                <dt>list 2</dt>
+                <dd>item 2</dd>
+            </dl>
+        <hr>
+        </section>
+        </article>
+        </main>
+        <!--links -->
+        <footer>
+        <h3>Links</h3>
+        <p>
+            <a href="#basic">Go to basic</a>
+            <br><a href="#">Go to top</a>
+            <br><a href="about.html">about me</a>
+        </p>
+        </footer>
+        <hr>
+
+        <!-- image -->
+        <h3>images</h3>
+        <img src="img/sencha.jpg" alt="sencha" title="sencha" width="640" height="427">
+        <h4>image in figure tag</h4>
+        <figure>
+            <a href="https://pixabay.com/photos/environmental-protection-326923/" target="_blank"><img src="img/environment.jpg" alt="environment" title="downloaded from pixabay.com" width="640" height="427" loading="lazy"></a>
+            <figcaption>this is environment</figcaption>
+        </figure>
+        <h4>figure tag without image</h4>
+        <figure>
+            <figcaption>this is &lt;figcaption&gt; tag without image</figcaption>
+            <p><code>&lt;h1&gt;hello world!&lt;/h1&gt;</code></p>
+        </figure>
+        <hr>
+
+        <!--sematics -->
+        <h3>sematics</h3>
+            <aside>
+                <details>
+                    <summary>This is written inside aside, details and summary</summary>
+                    <p>This is writter inside aside, details and paragaraph</p>
+                </details>
+            </aside>
+        <p>
+            <mark>This is mark hehe</mark>
+        </p>
+        <hr>
+
+        <h3>tables</h3>
+        <table>
+            <caption>My daily schedule</caption>
+            <thead>
+                <tr>
+                    <th>&nbsp;</th>
+                    <th scope="row">Time</th>
+                    <th scope="row">Activity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="col">Morning</th>
+                    <td>9 to 11</td>
+                    <td>write code</td>
+                </tr>
+                <tr>
+                    <th scope="col">Evening</th>
+                    <td rowspan="2">All other times</td>
+                    <td>free time</td>
+                </tr>
+                <tr>
+                    <th scope="col">Night</th>
+                    <td>sleep</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">This is footer</td>
+                </tr>
+            </tfoot>
+        </table>
+        
+    </body>
+
+</html>
